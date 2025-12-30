@@ -886,7 +886,7 @@ function runTests() {
   console.log(`   Day Master: ${testProfile.bazi.dayMaster.stem} (${testProfile.bazi.dayMaster.polarity}-${testProfile.bazi.dayMaster.element})\n`);
   console.log(`🔥 ELEMENTE:`);
   ['Wood', 'Fire', 'Earth', 'Metal', 'Water'].forEach(elem => {
-    const pct = testProfile.elementBalance.percentages[elem];
+    const pct = testProfile.fusion.elementVector[elem] * 100;
     const bars = '█'.repeat(Math.round(pct / 5));
     console.log(`   ${elem.padEnd(6)}: ${pct.toFixed(1)}% ${bars}`);
   });
